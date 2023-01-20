@@ -1,16 +1,7 @@
 
 
-aside {
-    border:2px solid purple;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    border:2px solid blue;
 
 
-}
 body {
     max-width  : 1400px;
     margin-top: 0px ;
@@ -21,6 +12,12 @@ body {
 
 i {
     color: #0065FC;
+    align-items: center;
+}
+a {
+    color: black;
+}
+#container {
 }
 
 
@@ -37,7 +34,6 @@ header img {
     margin-top: 40px ;
     margin-left: 40px;
     margin-bottom: 20px;
-
 }
 #primary-menu {
     margin-left: auto;
@@ -49,13 +45,11 @@ header img {
 #primary-menu ul li {
     list-style-type: none ;
     display : inline-block;
-    margin-right: 40px;
     border-top: 2px solid #0065FC;
-    outline-offset: 40px;
     height: 110px;
-    margin-top: auto;
-    margin-bottom: auto;
-
+    width: 120px;
+    background-color: aqua;
+    text-align: center;
 }
 
 #primary-menu ul li:visited {
@@ -65,7 +59,7 @@ header img {
 
 #partie-hebergement {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: auto;
 }
 /* -------------------------- main -----------------------*/ 
@@ -73,6 +67,7 @@ header img {
 .container-fond-gris {
     background-color: rgba(128, 128, 128, 0.274);
     border-radius: 15px;
+    width: 100%;
 }
         /* -------------------------- main - Filtres et recherche -----------------------*/ 
 #container-filtres {
@@ -86,9 +81,8 @@ header img {
 .filtres {
     display: flex;
     align-items: center;
-    border-color: grey;
+    border: 2px solid grey;
     border-radius: 30px;
-    border-width: 1px;
 }
 .filtres i {
     padding-right: 10px;
@@ -120,11 +114,10 @@ principal-hebergements h2 {
 }
 
 #afficherplus {
-    display: inline-block;
-    height: 100px;
-    margin: auto;
-    margin-bottom: auto;
+    display: block;
     font-weight: bold;
+    background-color:blue;
+    margin: 50px;
 }
 
 #liste-hebergements article {
@@ -143,7 +136,10 @@ principal-hebergements h2 {
  
 }
         /* -------------------------- Sidebar - Listes -----------------------*/ 
-
+aside {
+    display: flex;
+    flex-direction: column;
+}
 #sidebar-hebergements {
     width: 420px;
     height: 625px;
@@ -176,17 +172,19 @@ principal-hebergements h2 {
     margin-right: 5%;
 }
 
+/* -------------------------- Sidebar - Listes -----------------------*/ 
+
 #activites {
     display: flex;
-    justify-content: space-evenly;
     background-color: white;
-
+    justify-content: space-between;
+    margin-bottom:30px;
 }
 #activites figure {
     overflow: hidden;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
-
+    margin: 0px;
 }
 
 #activites figure img {
@@ -206,7 +204,6 @@ footer {
     display: flex;
     justify-content: space-evenly;
     background-color: #F2F2F2;
-    width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
