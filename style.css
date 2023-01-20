@@ -1,0 +1,222 @@
+
+
+aside {
+    border:2px solid purple;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    border:2px solid blue;
+
+
+}
+body {
+    max-width  : 1400px;
+    margin-top: 0px ;
+    margin-left: auto ;
+    margin-right: auto;
+    background-color: white;
+}
+
+i {
+    color: #0065FC;
+}
+
+
+/* -------------------------- header -----------------------*/ 
+
+header {
+    display: flex;
+    margin:0px;
+    padding: 0px;
+}
+header img {
+    width: 60px;
+    height: auto;
+    margin-top: 40px ;
+    margin-left: 40px;
+    margin-bottom: 20px;
+
+}
+#primary-menu {
+    margin-left: auto;
+    margin-top: 0px;
+}
+
+
+
+#primary-menu ul li {
+    list-style-type: none ;
+    display : inline-block;
+    margin-right: 40px;
+    border-top: 2px solid #0065FC;
+    outline-offset: 40px;
+    height: 110px;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+#primary-menu ul li:visited {
+    border-top: 2px solid #0065FC;
+}
+
+
+#partie-hebergement {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+/* -------------------------- main -----------------------*/ 
+
+.container-fond-gris {
+    background-color: rgba(128, 128, 128, 0.274);
+    border-radius: 15px;
+}
+        /* -------------------------- main - Filtres et recherche -----------------------*/ 
+#container-filtres {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    gap: 40px;   
+    font-weight: bold;
+}
+
+.filtres {
+    display: flex;
+    align-items: center;
+    border-color: grey;
+    border-radius: 30px;
+    border-width: 1px;
+}
+.filtres i {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.filtres p {
+    padding: 0px 20px 0px 0px;
+
+}
+.flex {
+    display: flex;
+
+}
+
+        /* -------------------------- main - Listes -----------------------*/ 
+#principal-hebergements {
+    height: 626px;
+    width: 880px;
+}
+
+#liste-hebergements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 30px;
+}
+principal-hebergements h2 {
+    padding-left: 20px;
+}
+
+#afficherplus {
+    display: inline-block;
+    height: 100px;
+    margin: auto;
+    margin-bottom: auto;
+    font-weight: bold;
+}
+
+#liste-hebergements article {
+    height: 200px;
+    width: 250px;
+    overflow: hidden;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+#liste-hebergements img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;  
+    border-radius: 10px 10px 0px 0px;
+ 
+}
+        /* -------------------------- Sidebar - Listes -----------------------*/ 
+
+#sidebar-hebergements {
+    width: 420px;
+    height: 625px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+#sidebar-hebergements article {
+
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    display: flex;
+    padding: 5px;
+ }
+#sidebar-hebergements article div {
+    display: flex;
+    flex-direction: column;    
+}
+
+#sidebar-hebergements img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0px 0px 10px;
+    margin-right: 5%;
+}
+
+#activites {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+
+}
+#activites figure {
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+}
+
+#activites figure img {
+    width : 300px;
+    height : 400px;
+    max-width: 100%;
+    object-fit: cover;
+}
+#activites figure figcaption {
+    padding: 20px;
+    font-weight: bold;
+}
+
+
+/* -------------------------- footer -----------------------*/ 
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #F2F2F2;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer nav {
+    width: 25%;
+}
+
+footer nav ul li {
+    list-style-type: none ;
+}
+footer nav ul li:first-child {
+    font-weight: bold;
+}
