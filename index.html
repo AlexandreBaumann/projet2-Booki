@@ -7,6 +7,9 @@
     <Link rel="stylesheet" href ="style.css">
     <script src="https://kit.fontawesome.com/6ea0c2bce2.js" crossorigin="anonymous"></script>
     <title> Booki, l'hébergement de rêve pour vos vacances</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
@@ -16,10 +19,9 @@
             <nav id="primary-menu">
                 <ul>
                     <li><a href=" #">Hébergement </a></li>
-                    <li><a href=" #">Activités </a></li>
+                    <li><a href="/activites/">Activités </a></li>
                 </ul>
             </nav>
-
         </header>
         <main>
             <section id=partie-superieure > 
@@ -32,6 +34,7 @@
                     <input type ="button" value="Rechercher">
                 </div>
                 <div id="container-filtres">
+                <!--  Filtres -->
                     <div>
                         <p> Filtres </p>
                     </div>
@@ -52,57 +55,58 @@
                         <p> Animaux autorisés </p>
                     </div>
                 </div>
-                <div class="flex">
+                <div id="nb-logements">
                     <i class="fa-solid fa-circle-info"></i>
                     <p> Plus de 500 logements sont disponibles dans cette ville </p>
                 </div>
 
             </section>
-
             <section id="partie-hebergement" >
                 <div class=container-fond-gris id=principal-hebergements>
+                <!--  Liste de 6 hébergements -->
                     <h2> Hébergements à Marseille </h2>
                     <div id="liste-hebergements">
                         <article>
                             <img src="Images/hebergements/4_small/1auberge-canebiere.jpg" alt="">     
                             <h3> Auberge La Canebière </h3>
                             <p> Nuit à partir de 25€</p>
-                            <i class=""></i>
+                            <div> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star" class="blanche"></i></div>
                         </article>
                         <article>
                             <img src="Images/hebergements/4_small/2hotel-du-port.jpg" alt="">     
                             <h3> Hôtel du port </h3>
                             <p> Nuit à partir de 52€</p>
-                            <i class=""></i>
+                            <div> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star" class="blanche"></i></div>
                         </article>
                         <article>
                             <img src="Images/hebergements/4_small/3hotel-les-mouettes.jpg" alt="">     
                             <h3> Hôtel Les mouettes </h3>
                             <p>Nuit à partir de 76€</p>
-                            <i class=""></i>
+                            <div> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star" class="blanche"></i></div>
                         </article>
                         <article>
                             <img src="Images/hebergements/4_small/4hotel-de-la-mer.jpg" alt="">     
                             <h3> Hôtel de la mer</h3>
                             <p>Nuit à partir de 46€</p>
-                            <i class=""></i>
+                            <div> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star" class="blanche"></i></div>
                         </article>
                         <article>
                             <img src="Images/hebergements/4_small/5auberge-le-panier.jpg" alt="">     
                             <h3> Auberge Le Panier</h3>
                             <p>Nuit à partir de 23€</p>
-                            <i class=""></i>
+                            <div> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star" class="blanche"></i></div>
                         </article>
                         <article>
                             <img src="Images/hebergements/4_small/6hotel-chez-amina.jpg" alt="">     
                             <h3> Hôtel Chez Amina </h3>
                             <p>Nuit à partir de 96€</p>
-                            <i class=""></i>
+                            <div> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star" class="blanche"></i></div>
                         </article>
                     </div>
                     <p id="afficherplus"> Afficher plus </p>
                 </div>
                 <aside class=container-fond-gris id="sidebar-hebergements">
+                <!--  Sidebar -->
                     <div> 
                         <h2> Les plus populaires </h2>
                         <i class="fa-solid fa-chart-line-up"></i>
@@ -134,6 +138,7 @@
                 </aside>
             </section>
             <section>
+                <!--  Activités -->
                 <h2> Activités à Marseille </h2>
                 <div id="activites">
                     <figure>
