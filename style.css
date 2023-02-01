@@ -37,6 +37,7 @@ p {
     font-size: 14px;
 }
 
+
 /* -------------------------- header -----------------------*/ 
 
 header {
@@ -47,9 +48,7 @@ header {
 header img {
     width: 60px;
     height: auto;
-    margin-top: 40px ;
-    margin-left: 40px;
-    margin-bottom: 20px;
+    align-items: center;
 }
 
 
@@ -66,7 +65,6 @@ header img {
 #primary-menu ul li {
     list-style-type: none ;
     display : block;
-    border-top: 2px solid #0065FC;
     width: 120px;
     text-align: center;
     padding-top: 50px;
@@ -74,7 +72,7 @@ header img {
     text-decoration: none;    
 }
 
-#primary-menu ul li:visited {
+.bordure-menu {
     border-top: 2px solid #0065FC;
 }
 
@@ -87,13 +85,14 @@ header img {
 /* -------------------------- main -----------------------*/ 
 
 .container-fond-gris {
-    background-color: rgba(128, 128, 128, 0.274);
+    background-color: #F2F2F2;
     border-radius: 15px;
 }
         /* -------------------------- main - Filtres et recherche -----------------------*/ 
 #searchbar {
-    display: flex; /* pourquoi flex est utile ici ? */
-    vertical-align: middle;  
+    display: flex;
+    vertical-align: middle;
+    height: 50px;
 }
 input {
     padding: 0px;
@@ -102,12 +101,12 @@ input {
 
 #searchbar i {
     border-radius: 15px 0px 0px 15px;
-    height: 49px;
     width: 50px;
+    text-align: center;
     padding-top: 16px;
-    padding-left: 18px;
     box-sizing: border-box;
-    background-color: rgba(128, 128, 128, 0.192);
+    background-color: #F2F2F2;
+    color:black;
 }
 .bouton-rechercher {
     background-color: #0065FC;
@@ -130,16 +129,20 @@ input::placeholder{
 
 #container-filtres {
     display: flex;
-    margin: 20px;
+    margin: 2%;
     align-items: center;
-    gap: 40px;   
+    gap: 3%;   
     font-weight: 700;
+}
+.filtres:active {
+    background-color:#DEEBFF ;
 }
 
 .filtres {
     display: flex;
     align-items: center;
-    border: 2px solid grey;
+    border: 2px solid #F2F2F2;
+    border: 2px solid #030303;
     border-radius: 30px;
 }
 .filtres i {
@@ -147,7 +150,7 @@ input::placeholder{
     padding-left: 10px;
 }
 .filtres p {
-    padding: 0px 20px 0px 0px;
+    padding-right: 20px ;
 }
 .filtres.active {
     background-color: lightblue;
@@ -157,13 +160,27 @@ input::placeholder{
     display: flex;
     align-items:baseline;
 }
+#nb-logements i {
+    color:#0065FC;
+    text-align: center;
+}
+
+#cercle {
+    border: 2px solid #F2F2F2;
+    border-radius:50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin-right: 1%;
+
+}
 
         /* -------------------------- main - Listes -----------------------*/ 
 #principal-hebergements {
-    height: 626px;
-    width: 880px;
-    padding-left: 40px;
-    padding-right: 40px;
+    height: 33%;
+    width: 60%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 #liste-hebergements {
@@ -179,8 +196,8 @@ principal-hebergements h2 {
 #afficherplus {
     display: block;
     font-weight: 700;
-    margin-top: 40px ;
-    margin-bottom: 40px;
+    margin-top: 4% ;
+    margin-bottom: 4%;
     font-size: 18px;
 }
 
@@ -215,8 +232,8 @@ principal-hebergements h2 {
     margin-bottom: 9px;
 }
 
-#liste-hebergements i:nth-child(5) {
-    color: rgba(128, 128, 128, 0.479);
+#liste-hebergements i:nth-child(5), #sidebar-hebergements i:nth-child(5){
+    color:#F2F2F2;
 }
 
         /* -------------------------- Sidebar - Listes -----------------------*/ 
@@ -255,8 +272,8 @@ aside {
  }
 
  #sidebar-hebergements img {
-    width: 40%;
-    height: 100%;
+    width: 137px;
+    height: 144px;
     object-fit: cover;
     border-radius: 10px 0px 0px 10px;
     margin-right: 5%;
@@ -310,7 +327,7 @@ aside {
 /* -------------------------- footer -----------------------*/ 
 footer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: #F2F2F2;
     margin-left: auto;
     margin-right: auto;
@@ -323,5 +340,5 @@ footer nav ul li {
     list-style-type: none ;
 }
 footer nav ul li:first-child {
-    font-weight: bold;
+    font-weight: 700;
 }
