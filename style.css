@@ -85,7 +85,7 @@ header img {
 /* -------------------------- main -----------------------*/ 
 
 .container-fond-gris {
-    background-color: #F2F2F2;
+    background-color: #302e2e;
     border-radius: 15px;
 }
         /* -------------------------- main - Filtres et recherche -----------------------*/ 
@@ -204,7 +204,6 @@ principal-hebergements h2 {
 #liste-hebergements article {
     height: 200px;
     width: 250px;
-    overflow: hidden;
     background-color: white;
     padding: 5px;
     border-radius: 10px;
@@ -214,6 +213,8 @@ principal-hebergements h2 {
     height: 60%;
     object-fit: cover;  
     border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+
 }
 
 #liste-hebergements article .description {
@@ -242,13 +243,23 @@ aside {
     flex-direction: column;
 }
 #sidebar-hebergements {
-    width: 420px;
-    height: 625px;
+    width: 30%;
+    /*height: 33%;  pourquoi ça ne marche pas  ? */
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
-    padding: 41px 40px 34px 37px;
+    padding: 3.5%;
     box-sizing: border-box;
+    justify-content: space-between;
+}
+
+#sidebar-hebergements a {
+    display: block;
+    height: 25%;
+    overflow: hidden;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: white;
+
 }
 
 #sidebar-entete {
@@ -262,18 +273,12 @@ aside {
 }
 
 #sidebar-hebergements article {
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: white;
-    width: 343px;
-    height: 144px;
     display: flex;
-    padding: 5px;
  }
 
  #sidebar-hebergements img {
-    width: 137px;
-    height: 144px;
+    width: 40%;
+    /* height: 100%; pourquoi ça casse tout ?*/
     object-fit: cover;
     border-radius: 10px 0px 0px 10px;
     margin-right: 5%;
