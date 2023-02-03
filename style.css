@@ -5,7 +5,8 @@
 }
 
 body {
-    max-width  : 1400px;
+    max-width  : 1400px ;
+    width : 90%;
     margin-top: 0px ;
     margin-left: auto ;
     margin-right: auto;
@@ -20,6 +21,7 @@ a {
     color: black;
     text-decoration: none;
 }
+
 a:hover {
     color: #0065FC;
 }
@@ -77,15 +79,10 @@ header img {
 }
 
 
-#partie-hebergement {
-    display: flex;
-    column-gap: 40px;
-    margin: auto;
-}
 /* -------------------------- main -----------------------*/ 
 
 .container-fond-gris {
-    background-color: #302e2e;
+    background-color: #F2F2F2;
     border-radius: 15px;
 }
         /* -------------------------- main - Filtres et recherche -----------------------*/ 
@@ -99,7 +96,7 @@ input {
     text-align: center;
 }
 
-#searchbar i {
+#icone-localisation {
     border-radius: 15px 0px 0px 15px;
     width: 50px;
     text-align: center;
@@ -112,11 +109,19 @@ input {
     background-color: #0065FC;
     border-radius:  0px 15px 15px 0px ;
     color: white;
+
+}
+#texte-rechercher {
     width: 132px;
     border: 0px;
     font-weight: 700;
     font-size: 18px;
 }
+
+#icone-rechercher {
+    display: none;
+}
+
 .case-rechercher {
     border: rgba(128, 128, 128, 0.192) solid 2px;
     font-weight: 700;
@@ -124,7 +129,6 @@ input {
 }
 input::placeholder{
     color: black; /* marche pour chrome mais pas pour firefox */
-
 }
 
 #container-filtres {
@@ -142,15 +146,15 @@ input::placeholder{
     display: flex;
     align-items: center;
     border: 2px solid #F2F2F2;
-    border: 2px solid #030303;
     border-radius: 30px;
+
 }
 .filtres i {
     padding-right: 10px;
     padding-left: 10px;
 }
 .filtres p {
-    padding-right: 20px ;
+    padding-right: 10px ;
 }
 .filtres.active {
     background-color: lightblue;
@@ -159,13 +163,11 @@ input::placeholder{
 #nb-logements {
     display: flex;
     align-items:baseline;
+    margin-bottom: 2% ;
 }
 #nb-logements i {
     color:#0065FC;
     text-align: center;
-}
-
-#cercle {
     border: 2px solid #F2F2F2;
     border-radius:50%;
     width: 20px;
@@ -175,57 +177,73 @@ input::placeholder{
 
 }
 
+    /* -------------------------- main - Hébergement -----------------------*/ 
+
+#partie-hebergement {
+    display: flex;
+    column-gap: 4%;
+    margin: auto;
+}
         /* -------------------------- main - Listes -----------------------*/ 
+
+
 #principal-hebergements {
     height: 33%;
     width: 60%;
     padding-left: 3%;
     padding-right: 3%;
+    margin-bottom: 3%;
 }
 
 #liste-hebergements {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    row-gap: 30px;
+    row-gap: 30px; /* Pourquoi passer en % ici casse tout ? */
 }
-principal-hebergements h2 {
+#principal-hebergements h2 {
     font-size: 22px;
+    margin-top: 5%;
 }
 
 #afficherplus {
     display: block;
     font-weight: 700;
     margin-top: 4% ;
-    margin-bottom: 4%;
+    margin-bottom: 5%;
     font-size: 18px;
 }
 
 #liste-hebergements article {
     height: 200px;
     width: 250px;
+    overflow: hidden;
     background-color: white;
-    padding: 5px;
+    padding: 2%;
     border-radius: 10px;
 }
+/*
+#liste-hebergements a {
+max-height: 25%;
+max-width: 25%;
+}
+*/
 #liste-hebergements article img {
     width: 100%;
     height: 60%;
     object-fit: cover;  
     border-radius: 10px 10px 0px 0px;
-    overflow: hidden;
-
 }
 
 #liste-hebergements article .description {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-left: 5%;
 }
 #liste-hebergements h3 {
-    font-size: 16px;
     margin-top: auto;
-    margin-bottom: 9px;
+    margin-bottom: 4%;
 }
 #liste-hebergements p {
     font-size: 14px;
@@ -243,23 +261,20 @@ aside {
     flex-direction: column;
 }
 #sidebar-hebergements {
-    width: 30%;
-    /*height: 33%;  pourquoi ça ne marche pas  ? */
+    width: 420px;
+    height: 625px;
     border-radius: 10px;
     display: flex;
-    padding: 3.5%;
+    padding: 41px 40px 34px 37px;
     box-sizing: border-box;
-    justify-content: space-between;
 }
 
-#sidebar-hebergements a {
-    display: block;
-    height: 25%;
-    overflow: hidden;
-    padding: 2%;
-    border-radius: 10px;
-    background-color: white;
-
+#sidebar-liste {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150%;
 }
 
 #sidebar-entete {
@@ -273,12 +288,18 @@ aside {
 }
 
 #sidebar-hebergements article {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    width: 343px;
+    height: 144px;
     display: flex;
+    padding: 5px;
  }
 
  #sidebar-hebergements img {
-    width: 40%;
-    /* height: 100%; pourquoi ça casse tout ?*/
+    width: 137px;
+    height: 144px;
     object-fit: cover;
     border-radius: 10px 0px 0px 10px;
     margin-right: 5%;
@@ -288,14 +309,12 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left:15px;
-    margin-top: 16px;
-    margin-bottom: 12px;
+    margin:4% 5% 2% 2%;
 
 }
 #sidebar-hebergements .description-sidebar h3 {
     margin-top: 0px;
-    margin-bottom: 7px;
+    margin-bottom: 5%;
 }
 #sidebar-hebergements .description-sidebar p {
     margin: 0px;
@@ -308,7 +327,7 @@ aside {
     display: flex;
     background-color: white;
     justify-content: space-between;
-    margin-bottom:30px;
+    margin-bottom:4%;
 }
 #activites figure {
     overflow: hidden;
@@ -320,11 +339,10 @@ aside {
 #activites figure img {
     width : 300px;
     height : 400px;
-    max-width: 100%;
     object-fit: cover;
 }
 #activites figure figcaption {
-    padding: 20px;
+    padding: 6%;
     font-weight: 700;
 }
 
@@ -336,6 +354,10 @@ footer {
     background-color: #F2F2F2;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 2%;
+    line-height: 200%;
+    padding-left: 2%;
+    padding-right: 18%;
 }
 footer nav {
     width: 25%;
@@ -346,4 +368,52 @@ footer nav ul li {
 }
 footer nav ul li:first-child {
     font-weight: 700;
+    margin-bottom: 5%;
 }
+
+/* -------------------------- Tablette -----------------------*/ 
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    body {
+        max-width  : 850px;
+        margin-top: 0px ;
+        margin-left: 50px ;
+        margin-right: 50px;
+        background-color: white;        
+    }
+
+    #containder {
+        margin-left: 50px ;
+        margin-right: 50px;
+    }
+    #partie-hebergement {
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+    }
+    #sidebar-liste {
+        display: flex;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 150%;
+    }
+
+
+}
+
+/* -------------------------- Mobile -----------------------*/ 
+@media screen and (max-width: 768px) {
+    #texte-rechercher {
+        display: none; 
+    }
+    #icone-rechercher {
+        display: block; 
+    }
+    
+
+
+
+}
+
+
