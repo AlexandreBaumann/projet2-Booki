@@ -5,12 +5,9 @@
 }
 
 body {
-    max-width  : 1400px ;
-    width : 90%;
-    margin-top: 0px ;
-    margin-left: auto ;
-    margin-right: auto;
-    background-color: white;
+    margin-left: 3% ;
+    margin-right: 3%;
+    margin-top: 0px;
 }
 
 i {
@@ -27,6 +24,11 @@ a:hover {
 }
 
 #container {
+    max-width  : 1400px ;
+    margin-top: 0px ;
+    margin-left: auto ;
+    margin-right: auto;
+    background-color: white;
 }
 
 h1, h2, h3, h4 {
@@ -81,10 +83,6 @@ header img {
 
 /* -------------------------- main -----------------------*/ 
 
-.container-fond-gris {
-    background-color: #F2F2F2;
-    border-radius: 15px;
-}
         /* -------------------------- main - Filtres et recherche -----------------------*/ 
 #searchbar {
     display: flex;
@@ -129,6 +127,8 @@ input {
 }
 input::placeholder{
     color: black; /* marche pour chrome mais pas pour firefox */
+    text-align: left;
+    padding-left: 10px;
 }
 
 #container-filtres {
@@ -141,6 +141,9 @@ input::placeholder{
 .filtres:active {
     background-color:#DEEBFF ;
 }
+.filtres:hover {
+    background-color:#DEEBFF ;
+}
 
 .filtres {
     display: flex;
@@ -151,10 +154,10 @@ input::placeholder{
 }
 .filtres i {
     padding-right: 10px;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 .filtres p {
-    padding-right: 10px ;
+    padding-right: 20px ;
 }
 .filtres.active {
     background-color: lightblue;
@@ -163,7 +166,7 @@ input::placeholder{
 #nb-logements {
     display: flex;
     align-items:baseline;
-    margin-bottom: 2% ;
+    margin-bottom: 1% ;
 }
 #nb-logements i {
     color:#0065FC;
@@ -182,7 +185,7 @@ input::placeholder{
 #partie-hebergement {
     display: flex;
     column-gap: 4%;
-    margin: auto;
+    margin-bottom: 4%;
 }
         /* -------------------------- main - Listes -----------------------*/ 
 
@@ -190,47 +193,49 @@ input::placeholder{
 #principal-hebergements {
     height: 33%;
     width: 60%;
-    padding-left: 3%;
-    padding-right: 3%;
-    margin-bottom: 3%;
+    padding: 3% 3% 2% 3%;
+    background-color: #F2F2F2;
+    border-radius: 15px;
 }
 
 #liste-hebergements {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    row-gap: 30px; /* Pourquoi passer en % ici casse tout ? */
+    row-gap: 30px;
+
 }
 #principal-hebergements h2 {
     font-size: 22px;
-    margin-top: 5%;
+    margin-top: 0px;
 }
 
 #afficherplus {
     display: block;
     font-weight: 700;
-    margin-top: 4% ;
-    margin-bottom: 5%;
+    margin-top: 5% ;
     font-size: 18px;
 }
-
 #liste-hebergements article {
+    height: 100%;
+}
+
+#liste-hebergements a {
+    max-height: 25%;
+    max-width: 29%;
     height: 200px;
     width: 250px;
     overflow: hidden;
     background-color: white;
-    padding: 2%;
+    padding: 0.5%;
     border-radius: 10px;
 }
-/*
-#liste-hebergements a {
-max-height: 25%;
-max-width: 25%;
-}
-*/
+
+
 #liste-hebergements article img {
     width: 100%;
     height: 60%;
+    max-height: 120px;
     object-fit: cover;  
     border-radius: 10px 10px 0px 0px;
 }
@@ -238,9 +243,12 @@ max-width: 25%;
 #liste-hebergements article .description {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-left: 5%;
+    /* min-height: fit-content;
+       min-height: 100px; ne marchent pas*/
 }
+
 #liste-hebergements h3 {
     margin-top: auto;
     margin-bottom: 4%;
@@ -261,20 +269,20 @@ aside {
     flex-direction: column;
 }
 #sidebar-hebergements {
-    width: 420px;
-    height: 625px;
+    width: 33%;
     border-radius: 10px;
     display: flex;
-    padding: 41px 40px 34px 37px;
-    box-sizing: border-box;
+    padding: 3%;
+    background-color: #F2F2F2;
+    border-radius: 15px;
 }
 
 #sidebar-liste {
-    padding-top: 5%;
+    margin-top: 6%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 150%;
+    height: 100%;
 }
 
 #sidebar-entete {
@@ -288,21 +296,24 @@ aside {
 }
 
 #sidebar-hebergements article {
+    height: 100%;
+    display: flex;
     border-radius: 10px;
     overflow: hidden;
-    background-color: white;
-    width: 343px;
+
+ }
+ #sidebar-hebergements a {
+    background-color: #ffffff;
     height: 144px;
-    display: flex;
+    border-radius: 10px;
     padding: 5px;
  }
 
+
  #sidebar-hebergements img {
-    width: 137px;
-    height: 144px;
     object-fit: cover;
     border-radius: 10px 0px 0px 10px;
-    margin-right: 5%;
+    width: 40%;
 }
 
 #sidebar-hebergements .description-sidebar {
@@ -329,11 +340,18 @@ aside {
     justify-content: space-between;
     margin-bottom:4%;
 }
+
+#activites a {
+    width: 20%;
+
+}
+
 #activites figure {
     overflow: hidden;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     margin: 0px;
+
 }
 
 #activites figure img {
@@ -342,10 +360,17 @@ aside {
     object-fit: cover;
 }
 #activites figure figcaption {
-    padding: 6%;
     font-weight: 700;
+    padding-left: 6%;
+    padding-right: 6%;
+    display: flex;
+    align-items: center;
+    height: 56px;    
 }
 
+#activites figure figcaption#figcaption-break {
+    display: none;
+}
 
 /* -------------------------- footer -----------------------*/ 
 footer {
@@ -370,48 +395,325 @@ footer nav ul li:first-child {
     font-weight: 700;
     margin-bottom: 5%;
 }
+/* -------------------------- Intermédiaire -----------------------*/ 
+@media screen and (min-width: 993px) and (max-width: 1240px) {
+    
+    #principal-hebergements h3 {
+        font-size: 14px;
+    }
+    #principal-hebergements p {
+        font-size: 12px
+    }
+    #activites figure figcaption {
+        font-size: 14px;
+        height: 45px; 
+    }
+    #activites figure img {
+        height : 300px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1060px) {
+    #activites figure figcaption {
+        font-size: 13px;
+    }
+}
 
 /* -------------------------- Tablette -----------------------*/ 
-@media screen and (min-width: 769px) and (max-width: 992px) {
-    body {
-        max-width  : 850px;
+/* -------------------------- Tablette -----------------------*/ 
+/* -------------------------- Tablette -----------------------*/ 
+/* -------------------------- Tablette -----------------------*/ 
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    #container {
+        width: 95%;
         margin-top: 0px ;
-        margin-left: 50px ;
-        margin-right: 50px;
         background-color: white;        
     }
-
-    #containder {
-        margin-left: 50px ;
-        margin-right: 50px;
+    body {
+        margin-top: 0px ;
     }
+    #partie-superieure {
+        margin-bottom: 20px;
+    }
+
+
+                /* Partie principale */
     #partie-hebergement {
         display: flex;
         margin: auto;
         flex-direction: column;
+        margin-bottom: 6%;
     }
+    #principal-hebergements {
+        width: auto;
+        padding: 4% ;
+    }
+    #afficherplus {
+        margin-bottom: 1%;
+    }
+
+                /* Sidebar */
+
+    #sidebar-hebergements{
+        padding: 4% ;
+    }
+
+    aside {
+        margin-top: 3%;
+    }
+    #sidebar-hebergements {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
     #sidebar-liste {
-        display: flex;
-    padding-top: 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 150%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    }
+    #sidebar-hebergements .description-sidebar {
+        margin: 4%;
+    }
+
+    #sidebar-liste  a {
+        display: flex;
+        width: 30%;
+        height: 120px;
+    }
+    #sidebar-liste h3 {
+        font-size: 14px;
+    }
+    #sidebar-liste p {
+        font-size: 11px;
+    }
+    #sidebar-liste i {
+        font-size: 12px;
+    }    
+    #sidebar-liste img {
+        width: 40%;
+    }
+
+                /* Activités */
+
+    #activites figure img {
+    height : 200px;
+    }
+    #activites figure figcaption {
+    font-size: 14px;
+    }
+    #activites figure figcaption#figcaption-break {
+        display: flex;
+    }
+    #activites figure figcaption#figcaption-comp {
+        display: none;
+    }
+                /* Footer */
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        background-color: #F2F2F2;
+        padding-top: 2%;
+        line-height: 170%;
+        padding-left: 2%;
+        padding-right: 5%;
+        font-size: 16px;
+        margin-top: 6%;
+    }
+    footer nav {
+        width: 33%;
+    }
+
+    footer nav ul li {
+        list-style-type: none ;
+    }
+    footer nav ul li:first-child {
+        font-weight: 700;
+        margin-bottom: 5%;
+        font-size: 18px;
+    }
+
+}
+/* -------------------------- Mobile -----------------------*/ 
+/* -------------------------- Mobile -----------------------*/ 
+/* -------------------------- Mobile -----------------------*/ 
+/* -------------------------- Mobile -----------------------*/ 
+
+
+@media screen and (max-width: 767px) {
+
+                        /* Header */
+    body {
+        padding: 0px;
+        margin: 0px;
     }
 
 
-}
+    header {
+        flex-direction: column;
+        margin-top: 20px;
+    }
 
-/* -------------------------- Mobile -----------------------*/ 
-@media screen and (max-width: 768px) {
+    nav {
+        width: 100%;
+        margin:0px;
+        box-sizing: border-box;
+    }
+    nav ul {
+        padding: 0px;
+    }
+    #primary-menu ul li {
+        width: 50%;
+        padding-bottom: 30px;
+    }
+    #primary-menu ul li:not(.bordure-menu) {
+        border-bottom:  2px solid #F2F2F2;
+    }
+    .bordure-menu {
+        border-top:none;
+        border-bottom: 2px solid #0065FC
+    }
+
+                    /* Partie supérieure */
+    h1 {
+        font-size: 22px;
+        margin-top: 13px;
+        margin-bottom: 13px;
+    }
+
+    #partie-superieure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4%;
+        box-sizing: border-box;
+    }
+    #searchbar {
+        margin: 0px;
+        height: 50px;
+        width: 100%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    .case-rechercher {
+        flex-grow: 1;
+    }
+
     #texte-rechercher {
         display: none; 
     }
     #icone-rechercher {
-        display: block; 
+        display: flex;
+        width: 50px; 
+        align-items: center;
+        justify-content: center;
     }
-    
 
+    #container-filtres {
+        display: flex;
+        margin: 2%;
+        flex-wrap: wrap;
+        font-weight: 700;
+    }
+
+    #texte-filtres {
+    width: 100%;
+
+    }
+
+    .filtres {
+        width: 47%;
+        margin-bottom: 10px;
+    }
+
+    .filtres i {
+        padding-left: 10px;
+    }
+    .filtres p {
+        padding-right: 10px ;
+        font-size: 11px;
+
+    }
+                /* Partie principale */
+    #partie-hebergement {
+        display: flex;
+        flex-direction: column;
+         margin-bottom: 6%;                
+    }
+                    /* Partie principale - bloc de 6*/
+    #principal-hebergements {
+        width: 100%;
+        box-sizing: border-box;
+        order: 2;
+        border-radius: 0px;
+        background-color: white;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    #liste-hebergements a {
+        width: 100%;
+        max-width: none;
+        height: 30%;
+        max-height: 200px;
+        object-fit: cover;  
+        border-radius: 10px 10px 0px 0px;
+
+        }
+
+
+                    /* Partie principale - bloc de 3*/
+    #sidebar-hebergements {
+        width: 100%;
+        box-sizing: border-box;
+        order: 1;
+        border-radius: 0px;
+        padding-top: 20px;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    #sidebar-liste {
+        row-gap: 10px;
+
+    }
+
+                /* Activités */
+    #partie-activites {
+        margin: 4%;
+    }
+    #activites {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    #activites a {
+        width: 100%;
+        height: 190px;
+    }
+    #activites figure img{
+        height: 130px;
+        width: 100%;
+    }
+    #activites figure figcaption#figcaption-break {
+        display: none;
+    }
+    #activites figure figcaption#figcaption-comp {
+        display: flex;
+    } 
+                /* Footer */
+    footer {
+        flex-direction: column;
+        padding: 4%;
+    }
+    footer nav {
+        width: 100%;
+    }
+    footer nav ul li:first-child {
+        margin-bottom: 3%;
+    }
 
 
 }
