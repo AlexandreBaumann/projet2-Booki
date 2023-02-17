@@ -131,15 +131,22 @@ input::placeholder{
 
 #container-filtres {
     display: flex;
-    margin: 2%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 4px;
     align-items: center;
     gap: 3%;   
     font-weight: 700;
 }
-.filtres:hover{
-    background-color:#DEEBFF ;
+#container-filtres p, i {
+    font-size: 17px;
 }
-.filtres:hover {
+
+#texte-filtres {
+    font-size: 17px;
+}
+
+.filtres:hover{
     background-color:#DEEBFF ;
 }
 
@@ -148,7 +155,6 @@ input::placeholder{
     align-items: center;
     border: 2px solid #F2F2F2;
     border-radius: 30px;
-
 }
 
 .filtres i {
@@ -177,7 +183,9 @@ input::placeholder{
     height: 20px;
     text-align: center;
     margin-right: 1%;
-
+}
+#nb-logements p {
+    margin-top: 0px;
 }
 
     /* -------------------------- main - Hébergement -----------------------*/ 
@@ -226,7 +234,6 @@ input::placeholder{
     border-radius: 10px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
 }
-
 
 #liste-hebergements article img {
     width: 100%;
@@ -400,7 +407,7 @@ footer nav ul li:first-child {
     #principal-hebergements h3 {
         font-size: 14px;
     }
-    #principal-hebergements p {
+    #principal-hebergements p:not(#afficherplus) {
         font-size: 12px
     }
     #activites figure {
@@ -560,6 +567,9 @@ footer nav ul li:first-child {
         font-size: 12px ;
         margin-bottom: 0px;
     }
+    #container-filtres p, i {
+        font-size: 15px;
+    }
 }
 
 /* -------------------------- Mobile -----------------------*/ 
@@ -654,6 +664,9 @@ footer nav ul li:first-child {
         flex-wrap: wrap;
         font-weight: 700;
     }
+    #container-filtres p, i {
+        font-size: 11px;
+    }
 
     #texte-filtres {
     width: 100%;
@@ -669,8 +682,6 @@ footer nav ul li:first-child {
     }
     .filtres p {
         padding-right: 10px ;
-        font-size: 11px;
-
     }
                 /* Partie principale */
     #partie-hebergement {
@@ -760,7 +771,9 @@ footer nav ul li:first-child {
         #activites figure {
             height: 300px;
         }
-
+        #container-filtres p, i {
+            font-size: 13px;
+        }
 
 
 }
