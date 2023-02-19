@@ -52,7 +52,6 @@ header img {
     width: 60px;
 }
 
-
 #primary-menu {
     margin-left: auto;
 }
@@ -84,6 +83,10 @@ header img {
 /* -------------------------- main -----------------------*/ 
 
         /* -------------------------- main - Filtres et recherche -----------------------*/ 
+#partie-superieure {
+    margin-bottom: 30px;
+}
+
 #searchbar {
     display: flex;
     height: 50px;
@@ -171,8 +174,7 @@ input::placeholder{
 
 #nb-logements {
     display: flex;
-    align-items:baseline;
-    margin-bottom: 1% ;
+    align-items:center;
 }
 #nb-logements i {
     color:#0065FC;
@@ -186,6 +188,7 @@ input::placeholder{
 }
 #nb-logements p {
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
     /* -------------------------- main - Hébergement -----------------------*/ 
@@ -238,7 +241,6 @@ input::placeholder{
 #liste-hebergements article img {
     width: 100%;
     height: 60%;
-    max-height: 120px;
     object-fit: cover;  
     border-radius: 10px 10px 0px 0px;
 }
@@ -314,6 +316,7 @@ aside {
     object-fit: cover;
     border-radius: 10px 0px 0px 10px;
     width: 40%;
+    flex-shrink: 0
 }
 
 #sidebar-hebergements .description-sidebar {
@@ -370,9 +373,6 @@ aside {
     margin-top: 0px;
 }
 
-#activites figure figcaption#figcaption-break {
-    display: none;
-}
 
 /* -------------------------- footer -----------------------*/ 
 footer {
@@ -434,7 +434,7 @@ footer nav ul li:first-child {
 /* -------------------------- Tablette -----------------------*/ 
 /* -------------------------- Tablette -----------------------*/ 
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
 
     #container {
         margin-top: 0px ;
@@ -443,9 +443,7 @@ footer nav ul li:first-child {
     body {
         margin-top: 0px ;
     }
-    #partie-superieure {
-        margin-bottom: 20px;
-    }
+
 
 
                 /* Partie principale */
@@ -473,7 +471,7 @@ footer nav ul li:first-child {
     }
 
     aside {
-        margin-top: 3%;
+        margin-top: 40px;
     }
     #sidebar-hebergements {
         box-sizing: border-box;
@@ -510,7 +508,10 @@ footer nav ul li:first-child {
     }
 
                 /* Activités */
-
+    #activites {
+        margin-bottom: 60px;
+        margin-top: 40px;
+    }
     
     #activites figure {
     height : 267px;
@@ -520,40 +521,27 @@ footer nav ul li:first-child {
     #activites figure figcaption {
     font-size: 14px;
     }
-    #activites figure figcaption#figcaption-break {
-        display: flex;
+    #activites figure figcaption#nddlg {
+    padding-right: 40%;
     }
-    #activites figure figcaption#figcaption-comp {
-        display: none;
-    }
+    
                 /* Footer */
 
     footer {
-        display: flex;
-        justify-content: space-between;
-        background-color: #F2F2F2;
-        padding-top: 2%;
         line-height: 170%;
-        padding-left: 2%;
-        padding-right: 2%;
-        font-size: 16px;
-        margin-top: 6%;
+        padding: 30px 50px 30px 50px;
     }
     footer nav {
         width: 33%;
     }
 
-    footer nav ul li {
-        list-style-type: none ;
-    }
+
     footer nav ul li:first-child {
-        font-weight: 700;
         margin-bottom: 5%;
-        font-size: 18px;
     }
 }
         /* -------------------------- Point intermédiaire -----------------------*/ 
-@media screen and (min-width: 768px) and (max-width: 900px) {
+@media screen and (min-width: 768px) and (max-width: 930px) {
     #liste-hebergements a {
         height:160px;
     }
@@ -570,6 +558,13 @@ footer nav ul li:first-child {
     #container-filtres p, i {
         font-size: 15px;
     }
+    #activites figure figcaption#nddlg {
+        padding-right: 35%;
+    }
+    footer nav ul li {
+        font-size: 15px;
+    }
+
 }
 
 /* -------------------------- Mobile -----------------------*/ 
@@ -630,12 +625,15 @@ footer nav ul li:first-child {
         align-items: center;
         padding: 4%;
         box-sizing: border-box;
+        margin-bottom: 10px;
     }
     #partie-superieure>div {
         width: 100%;
-
     }
-
+    #nb-logements {
+        margin-top: 20px;
+    }
+    
 
     #searchbar {
         margin: 0px;
@@ -664,12 +662,15 @@ footer nav ul li:first-child {
         flex-wrap: wrap;
         font-weight: 700;
     }
-    #container-filtres p, i {
+    #container-filtres p:not(:first-child) {
         font-size: 11px;
     }
 
     #texte-filtres {
     width: 100%;
+    }
+    #texte-filtres p {
+        font-size: 18px;
     }
 
     .filtres {
@@ -699,6 +700,10 @@ footer nav ul li:first-child {
         padding-left: 4%;
         padding-right: 4%;
     }
+    #principal-hebergements h2 {
+        padding-top: 10px;
+    }
+
     #liste-hebergements a {
         width: 100%;
         max-width: none;
@@ -716,17 +721,27 @@ footer nav ul li:first-child {
         padding-top: 20px;
         padding-left: 4%;
         padding-right: 4%;
+        padding-bottom: 40px;
     }
     #sidebar-liste {
         row-gap: 10px;
+        margin-top: 20px;
     }
     #afficherplus {
         display: none;
     }
 
                 /* Activités */
+                
     #partie-activites {
         margin: 4%;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    #partie-activites h2 {
+        margin-bottom: 2px;
+        margin-right: 50%;
+        font-size: 22px;
     }
     #activites {
         flex-direction: column;
@@ -742,12 +757,7 @@ footer nav ul li:first-child {
     #activites figure img{
         width: 100%;
     }
-    #activites figure figcaption#figcaption-break {
-        display: none;
-    }
-    #activites figure figcaption#figcaption-comp {
-        display: flex;
-    } 
+    
                 /* Footer */
     footer {
         flex-direction: column;
@@ -759,20 +769,15 @@ footer nav ul li:first-child {
     footer nav ul li:first-child {
         margin-bottom: 3%;
     }
-
-
 }
 
         /* -------------------------- Point intermédiaire -----------------------*/ 
         @media screen and (min-width: 400px) and (max-width: 767px) {
         #liste-hebergements a {
-            height: 300px;
+            height: 250px;
         }
         #activites figure {
-            height: 300px;
-        }
-        #container-filtres p, i {
-            font-size: 13px;
+            height: 250px;
         }
 
 
