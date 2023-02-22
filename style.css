@@ -70,13 +70,11 @@ header img {
     justify-content: center;
     height: 110px;
     text-decoration: none;
+    border-top: 2px solid #ffffff;
 }
-
-.bordure-menu {
+#primary-menu ul li:hover {
     border-top: 2px solid #0065FC;
-}
-#primary-menu ul li:not(.bordure-menu) {
-    border-top:  2px solid #ffffff;
+    color: #0065FC;
 }
 
 
@@ -434,7 +432,7 @@ footer nav ul li:first-child {
 /* -------------------------- Tablette -----------------------*/ 
 /* -------------------------- Tablette -----------------------*/ 
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
 
     #container {
         margin-top: 0px ;
@@ -597,19 +595,15 @@ footer nav ul li:first-child {
     #primary-menu ul li {
         width: 50%;
         height: 60px;
-    }
-    #primary-menu ul li:not(.bordure-menu) {
-        border-bottom:  2px solid #F2F2F2;
-        border-top:none;
-    }
-    
-    .bordure-menu {
+        border-bottom: 2px solid #ffffff;
+        border-top: none;
+    } 
+    #primary-menu ul li:hover {
         border-top:none;
         border-bottom: 2px solid #0065FC;
-    }
-    .bordure-menu a {
         color: #0065FC;
     }
+
 
 
                     /* Partie supérieure */
